@@ -870,6 +870,17 @@ namespace NvgSharp.Samples
 			vg.RestoreState();
 		}
 
+		public void renderSimpleRectDemo(NvgContext vg) {
+			vg.SaveState();
+			
+			vg.BeginPath();
+			vg.Rect(50, 50, 300, 300);
+			vg.FillColor(Utility.FromRGBA(255, 255, 255, 32));
+			vg.Fill();
+			
+			vg.RestoreState();
+		}
+
 		public void renderDemo(NvgContext vg, float mx, float my, float width, float height,
 						float t, bool blowup)
 		{
